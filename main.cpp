@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdio>
+#include <cstdint>
 
 using namespace std;
 
@@ -111,5 +112,28 @@ int main() {
   printf("Normal int is %ld bytes\n",sizeof(int));
   printf("Long int is %ld bytes\n",sizeof(long));
   printf("Long long int is %ld bytes\n",sizeof(long long int));
+
+  // Integer types (cstdint)
+  printf("Size of int8_t is: %ld\n",sizeof(int8_t));
+  //uint8_t;
+  //int16_t; and others ...
+
+  // Floating point numbers give scale, but at the expense of precision
+
+  const char * cstring1 = "String"; // The pointer itself is not const, but the value the pointer points to is. The string cannot be changed.
+
+  char cstring2[] = "String";
+
+  printf("\nC-String1: ");
+  for (int i=0; cstring1[i]; ++i)
+  {
+    printf("%c",cstring1[i]);
+  }
+
+  printf("\nC-String2: ");
+  for (char c:cstring2)
+  {
+    printf("%c",c);
+  }
 
 }
