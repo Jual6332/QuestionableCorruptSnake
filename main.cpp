@@ -83,6 +83,33 @@ int main() {
 
   // Printf and puts require less memory when compiled. Cout is more expensive for memory and time required for compilation
 
-  
+  // Chapter 3: Data Types
+
+  // A structure is a sequential set of objects of various types. May contain scalars, arrays, or even other structures and classes.
+
+  // C++ classes are based on structs. The main difference is that a struct has member functions or methods
+
+  // A union is a set of overlapping objects
+  union x 
+  {
+    int a;
+    int b;
+  };
+
+  // Integer types:
+  //1. char - 1 byte
+  //2. short int - 2 bytes
+  //3. int - 4 bytes
+  //4. long int - 8 bytes
+  //5. long long int - 8 bytes
+
+  // Use #include <cstdint> for specific-width integer types
+
+  printf("\nInteger Types:\n");
+  printf("Char is %ld bytes\n",sizeof(char));
+  printf("Short int is %ld bytes\n",sizeof(short));
+  printf("Normal int is %ld bytes\n",sizeof(int));
+  printf("Long int is %ld bytes\n",sizeof(long));
+  printf("Long long int is %ld bytes\n",sizeof(long long int));
 
 }
