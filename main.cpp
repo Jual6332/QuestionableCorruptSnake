@@ -59,4 +59,18 @@ int main() {
   }
   // A C-string is exactly the same as a primitive array, it is one case of an array
 
+  // Conditionals
+  if (14)
+  {
+    cout << "This is true" << endl;
+  }else {
+    cout << "This is false" << endl;
+  }
+  // Any non-zero value will result in true statement
+
+  // Ternary-conditional operator:
+  printf("The greater value is %d\n",2>3 ? 2:3);
+
+  // A switch statement is a multi-way conditiona; statement
+
 }
