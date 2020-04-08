@@ -56,7 +56,7 @@ int main() {
   {
     if (c==0) break;
     printf("Char is %c\n",c);
-  }
+  } // Unique to C++
   // A C-string is exactly the same as a primitive array, it is one case of an array
 
   // Conditionals
@@ -71,6 +71,18 @@ int main() {
   // Ternary-conditional operator:
   printf("The greater value is %d\n",2>3 ? 2:3);
 
-  // A switch statement is a multi-way conditiona; statement
+  // A switch statement is a multi-way conditional statement
+
+  // Covered while and do-while loops
+  
+  // The break command exits the loop block, but continue branches back to the top of the conditional
+
+  // The range-based for loop is exclusive to C++ starting in C++ and is not in C. This is also a compile-time feature
+
+  // COUT print method overloads the << bit-wise left shift operator to include the given characters to the output. More C++-ish than puts or printf
+
+  // Printf and puts require less memory when compiled. Cout is more expensive for memory and time required for compilation
+
+  
 
 }
