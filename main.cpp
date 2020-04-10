@@ -4,7 +4,8 @@
 
 using namespace std;
 
-class S {
+class S
+{
   public:
     int static_value() {
       static int x = 7;
@@ -12,7 +13,8 @@ class S {
     }
 };
 
-struct Employee{
+struct Employee 
+{
   int age;
   const char * name;
   const char * role;
@@ -24,6 +26,13 @@ struct BitFields
   int hasPets: 1;
   int numberOfChildren: 3;
 };
+
+enum card_rank : uint8_t {ACE=1,DEUCE=2,JACK=11,QUEEN,KING};
+
+string returnSTLString()
+{
+  return string("This is an STL string");
+}
 
 int main() {
   puts("Hello World!\n");
@@ -201,4 +210,27 @@ int main() {
   example.hasPets = true;
   example.numberOfChildren = 3;
 
+  // A function with void in the arguments block in C means the function takes no arguments
+
+  // This is different in C++, when no arguments are included, this means there are no arguments for the function
+
+  // More or less for compatibility with C to include void 
+
+  // The auto data type was included in C++11
+
+  auto x3 = returnSTLString();
+  printf("x3 is %s\n",x3.c_str());
+
+  if (typeid(x3) == typeid(string))
+  {
+    puts("x3 is string");
+  }
+
+  // Typeid() function finds the type of a data type
+
+  // Need to be concise when using the auto data type
+
+  // There was no function overloading in C language
+
+  // C++ includes a nullptr to remove ambiguity. A nullptr of any type
 }
