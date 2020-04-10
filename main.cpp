@@ -4,6 +4,27 @@
 
 using namespace std;
 
+class S {
+  public:
+    int static_value() {
+      static int x = 7;
+      return ++x;
+    }
+};
+
+struct Employee{
+  int age;
+  const char * name;
+  const char * role;
+};
+
+struct BitFields
+{
+  int hasHair: 1;
+  int hasPets: 1;
+  int numberOfChildren: 3;
+};
+
 int main() {
   puts("Hello World!\n");
 
@@ -137,6 +158,47 @@ int main() {
     printf("%c",c);
   }
 
+  // Character-escape sequences
   printf("Hello world \t \' \\");
+
+  // Qualifiers
+  const static int i = 34;
+
+  // CV Qualifiers:
+  // =============
+  // const
+  // volatile
+  // mutable
+
+  // Storage Duration:
+  // =============
+  // static - means the Lifetime of the program
+  // register
+  // extern
+
+  S r;
+  S q;
+  S p;
+
+  printf("%d\n",r.static_value());
+  printf("%d\n",q.static_value());
+  printf("%d\n",p.static_value());
+
+  // Notice how the value is incremented for each class object
+
+  int k = 5;
+  int & ik = k;
+  ik = 10; // <-- This changes the variable at place k in  memory
+  printf("\n%d\n",k);
+
+  // A struct type is a way to aggregate data
+  Employee joe = {42,"Joe","Boss"};
+  printf("%s is the %s and he is %d years old\n",joe.name,joe.role,joe.age);
+
+  // BitFields
+  struct BitFields example;
+  example.hasHair = false;
+  example.hasPets = true;
+  example.numberOfChildren = 3;
 
 }
