@@ -122,18 +122,21 @@ int main() {
 
   const char * cstring1 = "String"; // The pointer itself is not const, but the value the pointer points to is. The string cannot be changed.
 
-  char cstring2[] = "String";
-
   printf("\nC-String1: ");
   for (int i=0; cstring1[i]; ++i)
   {
     printf("%c",cstring1[i]);
   }
 
+  char cstring2[] = "String";
+
   printf("\nC-String2: ");
-  for (char c:cstring2)
+  for (auto c:cstring2)
   {
+    if (c==0) break;
     printf("%c",c);
   }
+
+  printf("Hello world \t \' \\");
 
 }
