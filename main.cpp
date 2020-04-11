@@ -233,4 +233,8 @@ int main() {
   // There was no function overloading in C language
 
   // C++ includes a nullptr to remove ambiguity. A nullptr of any type
+
+  int x4 = 5;
+  int y4 = 42;
+  x4 += y4; // x is evaluated only once in terms of argument arithmetic
 }
