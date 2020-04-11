@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdint>
+#include <typeinfo>
 
 using namespace std;
 
@@ -268,5 +269,11 @@ int main() {
   int io = 0;
   long int iz = 1;
   io = (int) iz;
+
+  // SizeOf function
+  printf("%zd",sizeof(int));
+
+  // typeid function
+  // #include <typeinfo>
 
 }
