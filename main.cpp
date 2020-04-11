@@ -237,4 +237,36 @@ int main() {
   int x4 = 5;
   int y4 = 42;
   x4 += y4; // x is evaluated only once in terms of argument arithmetic
+
+  // The ternary operator is a simple if-else for assignment
+  bool ans = x4 > y4 ? true : false;
+  cout << ans << endl;
+  // Simple condition and simple result
+
+  // When allocating space in memory with new, you must deallocate that memory using delete
+  // Ex: delete []array
+
+  long int *ir;
+  ir = new(nothrow) long int [100];
+  if (ir == nullptr)
+  {
+    fprintf(stderr,"Cannot allocate memory\n");
+  }
+
+  // try and catch block are recommended for catching errors
+
+  for (long int q=0; q<100; q++)
+  {
+    ir[q] = q;
+    cout << ir[q] << " ";
+  }
+
+  delete []ir;
+
+  // new and delete are the C++-way to allocate and deallocate memory vs malloc() and free() in C
+
+  int io = 0;
+  long int iz = 1;
+  io = (int) iz;
+
 }
