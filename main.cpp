@@ -35,6 +35,8 @@ string returnSTLString()
   return string("This is an STL string");
 }
 
+void printMessage();
+
 int main() {
   puts("Hello World!\n");
 
@@ -290,6 +292,21 @@ int main() {
 
   // Functions are call by value in C++ by definition
 
+  // Static storage is not stored on the stack and is persistent for the life of the project
+  static int u = 42;
 
+  // Avoid using automatic storage which stores everything on the stack
 
+  // Function pointers
+  void (*pfunc)() = printMessage;
+
+  pfunc();
+
+  // Function overloading is not legal in C
+
+}
+
+void printMessage()
+{
+  puts("this is func()\n");
 }
