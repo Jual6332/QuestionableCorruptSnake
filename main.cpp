@@ -276,4 +276,20 @@ int main() {
   // typeid function
   // #include <typeinfo>
 
+  // Function - call by value does not affect the passed variable but instead the local copy to the function
+
+  // Function - call by reference we send the address of the given variable so it can be changed outside of the function
+
+  // Function overloading - 2 or more functions have the same name but accept different input arguments and thus have different function signatures
+
+  // A function must be declared before it is called.
+
+  // We use a function signature for a forward declaration. The body of the function is not required
+
+  // Functions can be declared in separate .h files
+
+  // Functions are call by value in C++ by definition
+
+
+
 }
