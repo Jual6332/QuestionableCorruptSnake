@@ -20,11 +20,23 @@ class EmployeeA
   string name;
   public:
     void set_age(int new_val);
+    void set_name(string new_val);
+    void get_age();
 };
 
 void EmployeeA::set_age(int new_val)
 {
   age = new_val;
+}
+
+void EmployeeA::set_name(string new_val)
+{
+  name = new_val;
+}
+
+void EmployeeA::get_age()
+{
+  printf("%s is %d years old",name.c_str(),age);
 }
 
 struct Employee 
@@ -321,6 +333,12 @@ int main() {
   // Class defaults to private members and struct defaults to public members
   // Other than this, structs and classes are the same
   // In C++, classes are based off of structs
+
+  // EmployeeA
+  EmployeeA emp_a;
+  emp_a.set_age(25);
+  emp_a.set_name("Hugo");
+  emp_a.get_age();
 
 }
 
