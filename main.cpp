@@ -14,6 +14,19 @@ class S
     }
 };
 
+class EmployeeA
+{
+  int age;
+  string name;
+  public:
+    void set_age(int new_val);
+};
+
+void EmployeeA::set_age(int new_val)
+{
+  age = new_val;
+}
+
 struct Employee 
 {
   int age;
@@ -303,6 +316,11 @@ int main() {
   pfunc();
 
   // Function overloading is not legal in C
+
+  // Chapter 6
+  // Class defaults to private members and struct defaults to public members
+  // Other than this, structs and classes are the same
+  // In C++, classes are based off of structs
 
 }
 
