@@ -1,7 +1,12 @@
 #include <iostream>
-#include <cstdio>
 #include <cstdint>
 #include <typeinfo>
+
+/* C++ Standard Library*/
+#include <cstdio>
+#include <cstdlib>
+#include <cstring> /* Strings */
+#include <cerrno> /* Error Handling*/
 
 using namespace std;
 
@@ -365,12 +370,25 @@ int main() {
 
   // Templates do not care about the type in question during use
 
+  // The logic implementation is independent of the type
+
   int m = maxof<int>(7,9);
   printf("max is: %d\n",m);
-  const char * e = "STring";
+  const char * e = "String";
   string ef = "String";
   printf("%s\n",ef.c_str());
 
+  // Chapter 8: C++ Standard Library
+  printf("Writing to file");
+  FILE * fw = fopen("testfile.txt","w");
+  for (int i=0; i<5; i++)
+  {
+    fputs("Line\n",fw);
+  }
+  fclose(fw);
+  printf("Writing is done.");
+
+  //remove(fn) - Deletes a file
 
 }
 
