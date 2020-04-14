@@ -62,6 +62,20 @@ string returnSTLString()
 
 void printMessage();
 
+template <typename T>
+T maxof (T a, T b)
+{
+  return ( a>b ? a:b);
+}
+
+template <typename T>
+class A{
+  T a;
+  public:
+  T getA() const {return a;}
+  void setA(T & x){a=x;}
+};
+
 int main() {
   puts("Hello World!\n");
 
@@ -341,6 +355,22 @@ int main() {
   emp_a.get_age();
 
   // Destructors operate automatically to destroy data when it is no longer needed or in use
+
+  // Chapter 7: Templates
+  // Generic programming is done using templates
+
+  // When a function or class is made using a template, the compiler generates a specialization of that function or class
+
+  // C++ Templates are a powerful feature and easy to implement. Compiler times take longer as caveat. They are great for implementing containers
+
+  // Templates do not care about the type in question during use
+
+  int m = maxof<int>(7,9);
+  printf("max is: %d\n",m);
+  const char * e = "STring";
+  string ef = "String";
+  printf("%s\n",ef.c_str());
+
 
 }
 
