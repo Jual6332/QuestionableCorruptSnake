@@ -36,7 +36,7 @@ void EmployeeA::set_name(string new_val)
 
 void EmployeeA::get_age()
 {
-  printf("%s is %d years old",name.c_str(),age);
+  printf("%s is %d years old\n",name.c_str(),age);
 }
 
 struct Employee 
@@ -339,6 +339,8 @@ int main() {
   emp_a.set_age(25);
   emp_a.set_name("Hugo");
   emp_a.get_age();
+
+  // Destructors operate automatically to destroy data when it is no longer needed or in use
 
 }
 
