@@ -413,6 +413,29 @@ int main() {
   // Display the obtained data
   fputs(buf,stdout);
 
+  long int ix = 1234567890;
+  printf("Integer: %d, Long Int: %ld, String: %s\n",3,ix,"this is a string");
+
+  // Copy a string
+  const char * str1 = "String 1";
+  const char * str2 = "String 2";
+  char sd1[128];
+  strncpy(sd1,str1,128);
+
+  // strncat -- concatenate string
+  strncat(sd1," - ",128 - strlen(sd1)-1);
+  printf("%s\n",sd1);
+
+  // strlen -- get length of string
+  printf("Length of string: %ld\n",strlen(sd1));
+  
+  // strcmp -- compare strings
+  
+  // strchr -- find a char in string
+
+  // strstr -- find a string in string
+  strstr(sd1,str2);
+
 }
 
 void printMessage()
