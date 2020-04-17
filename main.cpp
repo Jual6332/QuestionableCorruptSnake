@@ -386,9 +386,18 @@ int main() {
     fputs("Line\n",fw);
   }
   fclose(fw);
-  printf("Writing is done.");
+  printf("Writing is done.\n");
 
   //remove(fn) - Deletes a file
+
+  static const char * fn1 = "file1.txt";
+  FILE * fh = fopen(fn1,"w");
+  fclose(fh);
+  puts("Done\n");
+
+  // Rename the file
+  static const char * fn2 = "file2.txt";
+  rename(fn1,fn2);
 
 }
 
