@@ -436,6 +436,10 @@ int main() {
   // strstr -- find a string in string
   strstr(sd1,str2);
 
+  // Error Handling
+  const char * errstr = strerror(errno);
+  printf("tried to build and this happened: %s\n",errstr);
+
 }
 
 void printMessage()
