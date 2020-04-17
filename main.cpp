@@ -398,6 +398,20 @@ int main() {
   // Rename the file
   static const char * fn2 = "file2.txt";
   rename(fn1,fn2);
+  remove(fn2);
+
+  fputs("Hello world\n",stdout);
+
+  // Prompt for data from the user
+  static char buf[256];
+  fputs("prompt: ",stdout);
+  fflush(stdout);
+
+  //Obtain data
+  fgets(buf,256,stdin);
+
+  // Display the obtained data
+  fputs(buf,stdout);
 
 }
 
