@@ -440,6 +440,16 @@ int main() {
   const char * errstr = strerror(errno);
   printf("tried to build and this happened: %s\n",errstr);
 
+  // Chapter 9: STL
+  // The standard template library introduces these data types:
+  // 1.) vector
+  // 2.) doubly linked list
+  // 3.) set
+  // 4.) map - associative container
+  // 5.) stack, enqueue, dequeue
+  // 6.) string
+  // 7.) iostream - reading and writing data for io devices
+
 }
 
 void printMessage()
